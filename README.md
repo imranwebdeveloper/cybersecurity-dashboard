@@ -1,30 +1,37 @@
-# React Cybersecurity Dashboard
+# Cybersecurity Dashboard
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+A modern, responsive cybersecurity dashboard built with React, Next.js, and shadcn/ui components. This dashboard provides real-time monitoring of security events, incidents, and threats across your infrastructure.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/imranwebdevelopers-projects/v0-react-cybersecurity-dashboard)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/f3ip318y8Bd)
+![Cybersecurity Dashboard Preview](https://sjc.microlink.io/wBtXHA5RhBDguDg0GR5P6-aBNsvUBm3cTlBd6xgmB5ySUZ8ERncJlTnnPe_hBucpbFxn15lg3qCwA3P5dJK-3w.jpeg)
 
-## Overview
+## 🔗 Links
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+- **GitHub Repository**: [github.com/imranwebdeveloper/cybersecurity-dashboard](https://github.com/imranwebdeveloper/cybersecurity-dashboard)
+- **Live Demo**: [v0-react-cybersecurity-dashboard.vercel.app](https://v0-react-cybersecurity-dashboard.vercel.app)
 
-## Deployment
+## ✨ Features
 
-Your project is live at:
+- **Real-time Security Events Chart**: Monitor security events across your infrastructure
+- **Security Incident Management**: Track and manage security incidents
+- **Global Threat Map**: Visualize attack origins and targets
+- **Advanced Analytics**: Multiple chart types for security data analysis
+  - Attack Vectors Chart
+  - Vulnerability Severity Distribution
+  - Attack Frequency Heatmap
+  - System Health Gauge
+- **Responsive Design**: Works on desktop, tablet, and mobile devices
+- **Modern UI**: Built with shadcn/ui components for a clean, professional look
 
-**[https://vercel.com/imranwebdevelopers-projects/v0-react-cybersecurity-dashboard](https://vercel.com/imranwebdevelopers-projects/v0-react-cybersecurity-dashboard)**
+## 🚀 Getting Started
 
-## Build your app
+### Prerequisites
 
-Continue building your app on:
+- Node.js 18.x or later
+- npm or yarn
 
-**[https://v0.dev/chat/projects/f3ip318y8Bd](https://v0.dev/chat/projects/f3ip318y8Bd)**
+### Installation
 
-## How It Works
-
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/imranwebdeveloper/cybersecurity-dashboard.git
+   cd cybersecurity-dashboard
