@@ -6,7 +6,7 @@ A modern, responsive cybersecurity dashboard built with React, Next.js, and shad
 ## 🔗 Links
 
 - **GitHub Repository**: [github.com/imranwebdeveloper/cybersecurity-dashboard](https://github.com/imranwebdeveloper/cybersecurity-dashboard)
-- **Live Demo**: [v0-react-cybersecurity-dashboard.vercel.app](https://v0-react-cybersecurity-dashboard.vercel.app)
+- **Live Demo**: [cybersecurity-dashboard](https://v0-react-cybersecurity-dashboard.vercel.app)
 
 ## ✨ Features
 
