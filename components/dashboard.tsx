@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { useState } from "react"
+import { useState } from "react";
 import {
   AlertTriangle,
   BarChart3,
@@ -20,22 +20,41 @@ import {
   ShieldCheck,
   User,
   Users,
-} from "lucide-react"
+} from "lucide-react";
 
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
-import { Input } from "@/components/ui/input"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { SecurityChart } from "./security-chart"
-import { ThreatMap } from "./threat-map"
-import { AttackVectorsChart } from "./attack-vectors-chart"
-import { VulnerabilityPieChart } from "./vulnerability-pie-chart"
-import { AttackHeatmapChart } from "./attack-heatmap-chart"
-import { SystemHealthGauge } from "./system-health-gauge"
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Input } from "@/components/ui/input";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { SecurityChart } from "./security-chart";
+import { ThreatMap } from "./threat-map";
+import { AttackVectorsChart } from "./attack-vectors-chart";
+import { VulnerabilityPieChart } from "./vulnerability-pie-chart";
+import { AttackHeatmapChart } from "./attack-heatmap-chart";
+import { SystemHealthGauge } from "./system-health-gauge";
 
 // Dummy data for the dashboard
 const securityIncidents = [
@@ -93,14 +112,14 @@ const securityIncidents = [
     status: "Resolved",
     affectedSystems: "Admin Portal",
   },
-]
+];
 
 // Navigation items for the sidebar
 interface NavItem {
-  title: string
-  icon: LucideIcon
-  href: string
-  badge?: number
+  title: string;
+  icon: LucideIcon;
+  href: string;
+  badge?: number;
 }
 
 const navItems: NavItem[] = [
@@ -111,10 +130,10 @@ const navItems: NavItem[] = [
   { title: "Users", icon: Users, href: "#", badge: 0 },
   { title: "Reports", icon: BarChart3, href: "#", badge: 0 },
   { title: "Settings", icon: Settings, href: "#", badge: 0 },
-]
+];
 
 export default function Dashboard() {
-  const [activeTab, setActiveTab] = useState("overview")
+  const [activeTab, setActiveTab] = useState("overview");
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -130,7 +149,9 @@ export default function Dashboard() {
             <div className="p-6 border-b">
               <div className="flex items-center gap-2">
                 <Shield className="h-6 w-6" />
-                <span className="text-xl font-bold tracking-tight">SecureGuard</span>
+                <span className="text-xl font-bold tracking-tight">
+                  SecureGuard
+                </span>
               </div>
             </div>
             <nav className="px-2 py-4">
@@ -152,7 +173,9 @@ export default function Dashboard() {
                 ))}
               </div>
               <div className="mt-6 pt-6 border-t">
-                <div className="px-3 mb-2 text-xs font-semibold text-muted-foreground">SETTINGS</div>
+                <div className="px-3 mb-2 text-xs font-semibold text-muted-foreground">
+                  SETTINGS
+                </div>
                 <a
                   href="#"
                   className="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground"
@@ -178,9 +201,9 @@ export default function Dashboard() {
             </nav>
           </SheetContent>
         </Sheet>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center md:flex hidden gap-2">
           <Shield className="h-6 w-6" />
-          <span className="text-xl font-bold tracking-tight">SecureGuard</span>
+          <span className="text-xl font-bold  tracking-tight">SecureGuard</span>
         </div>
         <div className="flex flex-1 items-center gap-4 md:ml-auto md:gap-2 lg:gap-4">
           <form className="ml-auto flex-1 sm:flex-initial">
@@ -242,9 +265,15 @@ export default function Dashboard() {
         </aside>
         <main className="flex flex-1 flex-col gap-4 p-4 md:gap-6 md:p-6 lg:gap-8 lg:p-8">
           <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-            <h1 className="text-2xl font-semibold tracking-tight">Security Dashboard</h1>
+            <h1 className="text-2xl font-semibold tracking-tight">
+              Security Dashboard
+            </h1>
             <div className="flex items-center gap-2">
-              <Button variant="outline" size="sm" className="h-8 gap-1 hidden sm:flex">
+              <Button
+                variant="outline"
+                size="sm"
+                className="h-8 gap-1 hidden sm:flex"
+              >
                 <Clock className="h-3.5 w-3.5" />
                 <span>Last updated: 2 minutes ago</span>
               </Button>
@@ -255,7 +284,12 @@ export default function Dashboard() {
               </Button>
             </div>
           </div>
-          <Tabs defaultValue="overview" value={activeTab} onValueChange={setActiveTab} className="space-y-4">
+          <Tabs
+            defaultValue="overview"
+            value={activeTab}
+            onValueChange={setActiveTab}
+            className="space-y-4"
+          >
             <div className="flex items-center justify-between">
               <TabsList className="w-full sm:w-auto overflow-auto">
                 <TabsTrigger value="overview">Overview</TabsTrigger>
@@ -284,42 +318,58 @@ export default function Dashboard() {
               <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
                 <Card>
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                    <CardTitle className="text-sm font-medium">Security Score</CardTitle>
+                    <CardTitle className="text-sm font-medium">
+                      Security Score
+                    </CardTitle>
                     <ShieldCheck className="h-4 w-4 text-green-500" />
                   </CardHeader>
                   <CardContent>
                     <div className="text-2xl font-bold">82/100</div>
-                    <p className="text-xs text-muted-foreground">+4 from last week</p>
+                    <p className="text-xs text-muted-foreground">
+                      +4 from last week
+                    </p>
                   </CardContent>
                 </Card>
                 <Card>
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                    <CardTitle className="text-sm font-medium">Active Incidents</CardTitle>
+                    <CardTitle className="text-sm font-medium">
+                      Active Incidents
+                    </CardTitle>
                     <AlertTriangle className="h-4 w-4 text-amber-500" />
                   </CardHeader>
                   <CardContent>
                     <div className="text-2xl font-bold">5</div>
-                    <p className="text-xs text-muted-foreground">+2 since yesterday</p>
+                    <p className="text-xs text-muted-foreground">
+                      +2 since yesterday
+                    </p>
                   </CardContent>
                 </Card>
                 <Card>
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                    <CardTitle className="text-sm font-medium">Vulnerabilities</CardTitle>
+                    <CardTitle className="text-sm font-medium">
+                      Vulnerabilities
+                    </CardTitle>
                     <FileWarning className="h-4 w-4 text-red-500" />
                   </CardHeader>
                   <CardContent>
                     <div className="text-2xl font-bold">12</div>
-                    <p className="text-xs text-muted-foreground">3 critical, 9 high</p>
+                    <p className="text-xs text-muted-foreground">
+                      3 critical, 9 high
+                    </p>
                   </CardContent>
                 </Card>
                 <Card>
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                    <CardTitle className="text-sm font-medium">Protected Assets</CardTitle>
+                    <CardTitle className="text-sm font-medium">
+                      Protected Assets
+                    </CardTitle>
                     <Lock className="h-4 w-4 text-blue-500" />
                   </CardHeader>
                   <CardContent>
                     <div className="text-2xl font-bold">142</div>
-                    <p className="text-xs text-muted-foreground">98% coverage</p>
+                    <p className="text-xs text-muted-foreground">
+                      98% coverage
+                    </p>
                   </CardContent>
                 </Card>
               </div>
@@ -328,7 +378,8 @@ export default function Dashboard() {
                   <CardHeader>
                     <CardTitle>Security Events (24h)</CardTitle>
                     <CardDescription>
-                      Real-time monitoring of security events across your infrastructure
+                      Real-time monitoring of security events across your
+                      infrastructure
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="pl-2">
@@ -338,20 +389,25 @@ export default function Dashboard() {
                 <Card className="lg:col-span-3">
                   <CardHeader>
                     <CardTitle>Recent Incidents</CardTitle>
-                    <CardDescription>Latest security incidents requiring attention</CardDescription>
+                    <CardDescription>
+                      Latest security incidents requiring attention
+                    </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-4">
                       {securityIncidents.slice(0, 3).map((incident) => (
-                        <div key={incident.id} className="flex items-start gap-4">
+                        <div
+                          key={incident.id}
+                          className="flex items-start gap-4"
+                        >
                           <div className="rounded-full p-1">
                             <ShieldAlert
                               className={`h-5 w-5 ${
                                 incident.severity === "Critical"
                                   ? "text-red-500"
                                   : incident.severity === "High"
-                                    ? "text-amber-500"
-                                    : "text-yellow-500"
+                                  ? "text-amber-500"
+                                  : "text-yellow-500"
                               }`}
                             />
                           </div>
@@ -363,8 +419,8 @@ export default function Dashboard() {
                                   incident.severity === "Critical"
                                     ? "destructive"
                                     : incident.severity === "High"
-                                      ? "default"
-                                      : "secondary"
+                                    ? "default"
+                                    : "secondary"
                                 }
                                 className="ml-2"
                               >
@@ -372,7 +428,10 @@ export default function Dashboard() {
                               </Badge>
                             </p>
                             <p className="text-sm text-muted-foreground">
-                              {incident.id} • {incident.source} • {new Date(incident.timestamp).toLocaleTimeString()}
+                              {incident.id} • {incident.source} •{" "}
+                              {new Date(
+                                incident.timestamp
+                              ).toLocaleTimeString()}
                             </p>
                           </div>
                           <Button variant="outline" size="sm">
@@ -383,7 +442,12 @@ export default function Dashboard() {
                     </div>
                   </CardContent>
                   <CardFooter>
-                    <Button variant="outline" size="sm" className="w-full" onClick={() => setActiveTab("incidents")}>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="w-full"
+                      onClick={() => setActiveTab("incidents")}
+                    >
                       View All Incidents
                     </Button>
                   </CardFooter>
@@ -395,7 +459,8 @@ export default function Dashboard() {
                 <CardHeader>
                   <CardTitle>Security Incidents</CardTitle>
                   <CardDescription>
-                    A comprehensive list of all security incidents detected in your environment
+                    A comprehensive list of all security incidents detected in
+                    your environment
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -416,7 +481,9 @@ export default function Dashboard() {
                       <TableBody>
                         {securityIncidents.map((incident) => (
                           <TableRow key={incident.id}>
-                            <TableCell className="font-medium">{incident.id}</TableCell>
+                            <TableCell className="font-medium">
+                              {incident.id}
+                            </TableCell>
                             <TableCell>{incident.type}</TableCell>
                             <TableCell>
                               <Badge
@@ -424,23 +491,26 @@ export default function Dashboard() {
                                   incident.severity === "Critical"
                                     ? "destructive"
                                     : incident.severity === "High"
-                                      ? "default"
-                                      : "secondary"
+                                    ? "default"
+                                    : "secondary"
                                 }
                               >
                                 {incident.severity}
                               </Badge>
                             </TableCell>
                             <TableCell>{incident.source}</TableCell>
-                            <TableCell>{new Date(incident.timestamp).toLocaleString()}</TableCell>
+                            <TableCell>
+                              {new Date(incident.timestamp).toLocaleString()}
+                            </TableCell>
                             <TableCell>
                               <Badge
                                 variant={
-                                  incident.status === "Open" || incident.status === "Investigating"
+                                  incident.status === "Open" ||
+                                  incident.status === "Investigating"
                                     ? "outline"
                                     : incident.status === "Mitigated"
-                                      ? "secondary"
-                                      : "default"
+                                    ? "secondary"
+                                    : "default"
                                 }
                               >
                                 {incident.status}
@@ -465,7 +535,8 @@ export default function Dashboard() {
                 <CardHeader>
                   <CardTitle>Global Threat Map</CardTitle>
                   <CardDescription>
-                    Real-time visualization of attack origins and targets across your infrastructure
+                    Real-time visualization of attack origins and targets across
+                    your infrastructure
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -477,15 +548,21 @@ export default function Dashboard() {
                   <div className="flex items-center gap-2">
                     <div className="flex items-center gap-1">
                       <span className="h-3 w-3 rounded-full bg-red-500"></span>
-                      <span className="text-xs text-muted-foreground">Attack Source</span>
+                      <span className="text-xs text-muted-foreground">
+                        Attack Source
+                      </span>
                     </div>
                     <div className="flex items-center gap-1">
                       <span className="h-3 w-3 rounded-full bg-blue-500"></span>
-                      <span className="text-xs text-muted-foreground">Target</span>
+                      <span className="text-xs text-muted-foreground">
+                        Target
+                      </span>
                     </div>
                     <div className="flex items-center gap-1">
                       <span className="h-3 w-3 rounded-full bg-amber-500"></span>
-                      <span className="text-xs text-muted-foreground">Active Attack</span>
+                      <span className="text-xs text-muted-foreground">
+                        Active Attack
+                      </span>
                     </div>
                   </div>
                   <Button variant="outline" size="sm">
@@ -499,7 +576,9 @@ export default function Dashboard() {
                 <Card className="col-span-full md:col-span-1 lg:col-span-2">
                   <CardHeader>
                     <CardTitle>Attack Vectors (Last 30 Days)</CardTitle>
-                    <CardDescription>Distribution of attack types by frequency</CardDescription>
+                    <CardDescription>
+                      Distribution of attack types by frequency
+                    </CardDescription>
                   </CardHeader>
                   <CardContent className="pl-2">
                     <AttackVectorsChart />
@@ -508,7 +587,9 @@ export default function Dashboard() {
                 <Card>
                   <CardHeader>
                     <CardTitle>Vulnerability Severity</CardTitle>
-                    <CardDescription>Distribution by severity level</CardDescription>
+                    <CardDescription>
+                      Distribution by severity level
+                    </CardDescription>
                   </CardHeader>
                   <CardContent className="flex justify-center items-center pt-4">
                     <VulnerabilityPieChart />
@@ -517,7 +598,9 @@ export default function Dashboard() {
                 <Card className="col-span-full md:col-span-2 lg:col-span-2">
                   <CardHeader>
                     <CardTitle>Attack Frequency by Time</CardTitle>
-                    <CardDescription>Heatmap of attack frequency by hour and day</CardDescription>
+                    <CardDescription>
+                      Heatmap of attack frequency by hour and day
+                    </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <AttackHeatmapChart />
@@ -538,5 +621,5 @@ export default function Dashboard() {
         </main>
       </div>
     </div>
-  )
+  );
 }
