@@ -2,7 +2,6 @@
 
 A modern, responsive cybersecurity dashboard built with React, Next.js, and shadcn/ui components. This dashboard provides real-time monitoring of security events, incidents, and threats across your infrastructure.
 
-![Cybersecurity Dashboard Preview](https://sjc.microlink.io/wBtXHA5RhBDguDg0GR5P6-aBNsvUBm3cTlBd6xgmB5ySUZ8ERncJlTnnPe_hBucpbFxn15lg3qCwA3P5dJK-3w.jpeg)
 
 ## 🔗 Links
 
