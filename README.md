@@ -34,3 +34,16 @@ A modern, responsive cybersecurity dashboard built with React, Next.js, and shad
    ```bash
    git clone https://github.com/imranwebdeveloper/cybersecurity-dashboard.git
    cd cybersecurity-dashboard
+
+### Installation with pnpm
+
+1. **Install pnpm** (if not already installed):
+   ```bash
+   # Using npm
+   npm install -g pnpm
+
+   # Using Homebrew on macOS
+   brew install pnpm
+
+   # Using Scoop on Windows
+   scoop install pnpm
